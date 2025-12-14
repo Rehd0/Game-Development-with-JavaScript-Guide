@@ -1,0 +1,157 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fefcf3;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  padding: 5rem;
+  align-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#header-image {
+  display: block;
+  margin: 50px auto 20px auto;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #333333;
+  margin: 20px 0;
+}
+
+nav ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+nav h2 {
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+img {
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #333333;
+}
+
+.lesson {
+  margin-bottom: 40px;
+}
+.sub-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+pre {
+  background: rgb(0 0 0 / 0.2);
+  color: #000;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1rem;
+  font-family: monospace, "Courier New", Courier;
+  font-size: 14px;
+}
+code {
+  background: rgb(0 0 0 / 0.1);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: monospace, "Courier New", Courier;
+  box-shadow: inset 0 0 2px rgb(0 0 0 / 0.2);
+  font-size: 14px;
+}
+
+table {
+  min-width: 350px;
+  border-collapse: separate;
+  border-spacing: 0; /* keeps cells tight */
+  margin: 20px auto;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  overflow: hidden; /* ensures inner cells don’t spill over */
+}
+
+table thead {
+  width: 100%;
+  background: rgb(0 0 0 / 0.2);
+  margin: -10px;
+}
+th,
+td {
+  padding: 10px 15px;
+  text-align: left;
+}
+th {
+  background: rgb(0 0 0 / 0.2);
+}
+
+.shareBtn {
+  width: 150px;
+  height: 150px;
+  border: none;
+  background: rgb(0 0 0 / 0.2);
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fefcf3;
+  border-radius: 50%;
+  margin: 10rem auto 0 auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 10rem;
+  }
+}
