@@ -7,6 +7,10 @@
     <meta name="keywords" content="JavaScript, Game Development, Web Games, Programming, Coding, HTML5, CSS3" />
     <meta name="author" content="Rehd" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="og:title" content="Game Development with Js" />
+    <meta name="og:description" content="A comprehensive guide to game development using JavaScript, covering basics to advanced techniques." />
+    <meta name="og:image" content="./assets/images/0e4fdce8ac22e09688c580e5bc4dcd7d.jpg" />
+    <meta name="og:type" content="website" />
     <title>Game Development with Js</title>
 
     <link href="./assets/images/0e4fdce8ac22e09688c580e5bc4dcd7d.jpg" rel="icon" type="image/png" />
@@ -25,19 +29,9 @@
       </p>
       <img src="./assets/images/0e4fdce8ac22e09688c580e5bc4dcd7d.jpg" alt="Game Development with JavaScript" id="header-image" />
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
+      <br/><br/><br/><br/><br/>
       <span class="line"></span>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/><br/><br/><br/><br/>
 
       <nav>
         <h2>Contents</h2>
@@ -69,29 +63,36 @@
               <li><a href="#event-object">Event Object</a></li>
             </ul>
           </li>
+
+          <li>
+            <h2><a href="#working-with-canvas"># Workig with Canvas</a></h2>
+            <ul>
+              <li><a href="#html5-canvas">HTML5 Canvas</a></li>
+              <li><a href="#drawing-shapes">Drawing Shapes</a></li>
+              <li><a href="#rectangles-and-circles">Rectangles and Circles</a></li>
+              <li><a href="#applying-style-&-colors">Applying style & Colors</a></li>
+              <li><a href="#drawing-texts">Drawing Texts</a></li>
+              <li><a href="#adding-images">Adding Images</a></li>
+              <li><a href="#animation">Animation</a></li>
+            </ul>
+          </li>
+
         </ol>
       </nav>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/><br/><br/><br/><br/>
     </header>
 
     <span class="line"></span>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <br/><br/><br/><br/><br/>
 
     <main>
-      <section>
-        <h2 id="getting-started"># Getting Started</h2>
+      <!-- Module 1: Getting started  -->
+      <section id="getting-started">
+        <h2># Getting Started</h2>
 
-        <div class="lesson">
-          <h3 id="introduction" class="sub-title">Introduction</h3>
+        <div class="lesson" id="introduction">
+          <h3 class="sub-title">Introduction</h3>
           <p>
             This guide is your gateway to mastering game development with
             JavaScript. Whether you're a beginner or an experienced developer,
@@ -113,8 +114,8 @@
           </p>
         </div>
 
-        <div class="lesson">
-          <h3 id="requirements" class="sub-title">Requirements</h3>
+        <div class="lesson" id="requirements">
+          <h3 class="sub-title">Requirements</h3>
           <p>
             Before diving into game development with JavaScript, it's essential
             to ensure you have the necessary tools and resources. Here's a list
@@ -143,8 +144,8 @@
           </ul>
         </div>
 
-        <div class="lesson">
-          <h3 id="setting-up" class="sub-title">Setting Up</h3>
+        <div class="lesson" id="setting-up">
+          <h3 class="sub-title">Setting Up</h3>
           <p>
             Setting up your development environment is the first step toward
             creating games with JavaScript. Follow these steps to get started:
@@ -168,29 +169,20 @@
           </ul>
         </div>
 
-        <button class="shareBtn" data-url="#getting-started" aria-level="share this section">↥</button>
+        <button class="shareBtn" data-url="#getting-started" aria-level="share this section">🖇️</button>
       </section>
 
-
-      <br>
-      <br>
-      <br>
       <span class="line"></span>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
 
-
-        <section>
-            <h2 id="javaScript-Basics"># JavaScript Basics</h2>
+      <!-- Module 2: JavaScript Bai# -->
+        <section id="javaScript-Basics">
+            <h2># JavaScript Basics</h2>
             <p>JavaScript is a programming language for tge web. it can be used to create interactive elements or simply make the webpage interactive.
                 websites and game developer use it to handle events like making a dropdown menu, handling a button click and much more.
             </p>
 
-            <div class="lesson">
-              <h3 id="variables-and-data-types" class="sub-title">Variables and Data Types</h3>
+            <div class="lesson" id="variables-and-data-types">
+              <h3 class="sub-title">Variables and Data Types</h3>
               <p>
                 In JavaScript, variables are used to store data values. You can
                 declare a variable using the <code>var</code>, <code>let</code>, or
@@ -213,9 +205,8 @@ let isGameOver = false;
             </div>
 
 
-
-            <div class="lesson">
-              <h3 id="operators-and-expressions" class="sub-title">Operators and Expressions</h3>
+            <div class="lesson" id="operators-and-expressions">
+              <h3 class="sub-title">Operators and Expressions</h3>
               <p>
                 Operators are symbols that perform operations on variables and
                 values. JavaScript includes various types of operators, such as:
@@ -226,127 +217,85 @@ let isGameOver = false;
                 <li><strong>Comparison Operators:</strong> ==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</li>
                 <li><strong>Logical Operators:</strong> &&, ||, !</li>
               </ul>
-                    <p>Here are all the operators and examples of their usage:</p>
+              <p>Here are all the operators and examples of their usage:</p>
 
               <table>
                 <thead>
                   <tr>
-                    <th>Operator</th>
-                    <th>Description</th>
-                    <th>Example</th>
+                    <th>Operator</th> <th>Description</th> <th>Example</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>+</td><td>Addition</td>
-                    <td><code>5 + 3 // 8</code></td>
+                  <tr>
+                    <td>+</td> <td>Addition</td> <td><code>5 + 3 // 8</code></td>
                   </tr>
                   <tr>
-                    <td>-</td>
-                    <td>Subtraction</td>
-                    <td><code>5 - 3 // 2</code></td>
+                    <td>-</td> <td>Subtraction</td> <td><code>5 - 3 // 2</code></td>
                   </tr>
                   <tr>
-                    <td>*</td>
-                    <td>Multiplication</td>
-                    <td><code>5 * 3 // 15</code></td>
+                    <td>*</td> <td>Multiplication</td> <td><code>5 * 3 // 15</code></td>
                   </tr>
                   <tr>
-                    <td>/</td>
-                    <td>Division</td>
-                    <td><code>6 / 3 // 2</code></td>
+                    <td>/</td> <td>Division</td> <td><code>6 / 3 // 2</code></td>
                   </tr>
                   <tr>
-                    <td>%</td>
-                    <td>Modulus</td>
-                    <td><code>5 % 2 // 1</code></td>
+                    <td>%</td> <td>Modulus</td> <td><code>5 % 2 // 1</code></td>
                   </tr>
                   <tr>
-                    <td>=</td>
-                    <td>Assignment</td>
-                    <td><code>x = 5</code></td>
+                    <td>=</td> <td>Assignment</td> <td><code>x = 5</code></td>
                   </tr>
                   <tr>
-                    <td>+=</td>
-                    <td>Addition Assignment</td>
-                    <td><code>x += 3 // x = x + 3</code></td>
+                    <td>+=</td> <td>Addition Assignment</td> <td><code>x += 3 // x = x + 3</code></td>
                   </tr>
                   <tr>
-                    <td>-=</td>
-                    <td>Subtraction Assignment</td>
-                    <td><code>x -= 2 // x = x - 2</code></td>
+                    <td>-=</td> <td>Subtraction Assignment</td> <td><code>x -= 2 // x = x - 2</code></td>
                   </tr>
                   <tr>
-                    <td>*=</td>
-                    <td>Multiplication Assignment</td>
-                    <td><code>x *= 4 // x = x * 4</code></td>
+                    <td>*=</td> <td>Multiplication Assignment</td> <td><code>x *= 4 // x = x * 4</code></td>
                   </tr>
                   <tr>
-                    <td>/=</td>
-                    <td>Division Assignment</td>
-                    <td><code>x /= 2 // x = x / 2</code></td>
+                    <td>/=</td> <td>Division Assignment</td> <td><code>x /= 2 // x = x / 2</code></td>
                   </tr>
                   <tr>
-                    <td>==</td>
-                    <td>Equality</td>
-                    <td><code>5 == '5' // true</code></td>
+                    <td>==</td> <td>Equality</td> <td><code>5 == '5' // true</code></td>
                   </tr>
                   <tr>
-                    <td>===</td>
-                    <td>Strict Equality</td>
-                    <td><code>5 === '5' // false</code></td>
+                    <td>===</td> <td>Strict Equality</td> <td><code>5 === '5' // false</code></td>
                   </tr>
                   <tr>
-                    <td>!=</td>
-                    <td>Inequality</td>
-                    <td><code>5 != 3 // true</code></td>
+                    <td>!=</td> <td>Inequality</td> <td><code>5 != 3 // true</code></td>
                   </tr>
                   <tr>
-                    <td>!==</td>
-                    <td>Strict Inequality</td>
-                    <td><code>5 !== '5' // true</code></td>
+                    <td>!==</td> <td>Strict Inequality</td> <td><code>5 !== '5' // true</code></td>
                   </tr>
                   <tr>
-                  <td>></td>
-                    <td>Greater Than</td>
-                    <td><code>5 &gt; 3 // true</code></td>
+                    <td>></td> <td>Greater Than</td> <td><code>5 &gt; 3 // true</code></td>
                   </tr>
                   <tr>
-                    <td><</td>
-                    <td>Less Than</td>
-                    <td><code>3 &lt; 5 // true</code></td>
+                    <td><</td> <td>Less Than</td> <td><code>3 &lt; 5 // true</code></td>
                   </tr>
                   <tr>
-                    <td>>=</td>
-                    <td>Greater Than or Equal To</td>
-                    <td><code>5 &gt;= 5 // true</code></td>
+                    <td>>=</td> <td>Greater Than or Equal To</td> <td><code>5 &gt;= 5 // true</code></td>
                   </tr>
                   <tr>
-                    <td><=</td>
-                    <td>Less Than or Equal To</td>
-                    <td><code>3 &lt;= 5 // true</code></td>
+                    <td><=</td> <td>Less Than or Equal To</td> <td><code>3 &lt;= 5 // true</code></td>
                   </tr>
                   <tr>
-                  <td>&&</td>
-                    <td>Logical AND</td>
-                    <td><code>true && false // false</code></td>
+                    <td>&&</td> <td>Logical AND</td> <td><code>true && false // false</code></td>
                   </tr>
                   <tr>
-                    <td>||</td>
-                    <td>Logical OR</td>
-                    <td><code>true || false // true</code></td>
+                    <td>||</td> <td>Logical OR</td> <td><code>true || false // true</code></td>
                   </tr>
                   <tr>
-                    <td>!</td>
-                    <td>Logical NOT</td>
-                    <td><code>!true // false</code></td>
+                    <td>!</td> <td>Logical NOT</td> <td><code>!true // false</code></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
 
-            <div class="lesson">
-              <h3 id="functions-scope-and-parameters" class="sub-title">Functions, Scope and Parameters</h3>
+            <div class="lesson" id="functions-scope-and-parameters">
+              <h3 class="sub-title">Functions, Scope and Parameters</h3>
               <p>
                 Functions are reusable blocks of code that perform specific tasks.
                 So instead of writing the same code multiple times, you can define a
@@ -403,8 +352,8 @@ console.log(user)  // Error: user is not defined
 
             </div>
 
-            <div class="lesson">
-              <h3 id="control-structures" class="sub-title">Control Structures (Decision making)</h3>
+            <div class="lesson" id="control-structures">
+              <h3 class="sub-title">Control Structures (Decision making)</h3>
               <p>
                 Control structures allow you to control the flow of your code
                 based on certain conditions. The most common control structures in
@@ -482,29 +431,22 @@ do {
 
 
             </div>
-            <button class="shareBtn" data-url="#javaScript-Basics" aria-level="share this section">↥</button>
+            <button class="shareBtn" data-url="#javaScript-Basics" aria-level="share this section">🖇️</button>
       </section>
 
-      <br>
-      <br>
-      <br>
       <span class="line"></span>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
 
-        <section>
-            <h2 id="handling-events"># Handling Events</h2>
+        <!-- Module 3: Events Handling -->
+        <section id="handling-events">
+            <h2># Handling Events</h2>
             <p>
             Events are actions or occurrences that happen in the browser, such as
             a user clicking a button, moving the mouse, or pressing a key. In
             JavaScript, you can handle these events using event listeners.
             </p>
 
-            <div class="lesson">
-            <h3 id="event-listeners" class="sub-title">Event Listeners</h3>
+            <div class="lesson" id="event-listeners">
+            <h3 class="sub-title">Event Listeners</h3>
             <p>
                 Event listeners are functions that are executed when a specific
                 event occurs. You can attach event listeners to HTML elements using
@@ -534,43 +476,34 @@ button.addEventListener("click", function() {
 
             </div>
 
-            <div class="lesson">
-            <h3 id="common-events" class="sub-title">Common Events</h3>
-            <p>
-                There are way to many events you can listen for in JavaScript, You probably don't want to memorize them all, but here are some of the most common events you'll always encounter:
-            </p>
+            <div class="lesson" id="common-events">
+            <h3 class="sub-title">Common Events</h3>
+            <p>There are way to many events you can listen for in JavaScript, You probably don't want to memorize them all, but here are some of the most common events you'll always encounter:</p>
 
               <table>
                 <thead>
                   <tr>
-                    <th>Event</th>
-                    <th>Description</th>
+                    <th>Event</th> <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>click</td>
-                    <td>Triggered when an element is clicked</td>
+                    <td>click</td> <td>Triggered when an element is clicked</td>
                   </tr>
                   <tr>
-                    <td>mouseover</td>
-                    <td>Triggered when the mouse pointer is moved over an element</td>
+                    <td>mouseover</td> <td>Triggered when the mouse pointer is moved over an element</td>
                   </tr>
                   <tr>
-                    <td>mouseout</td>
-                    <td>Triggered when the mouse pointer is moved out of an element</td>
+                    <td>mouseout</td> <td>Triggered when the mouse pointer is moved out of an element</td>
                   </tr>
                   <tr>
-                    <td>keydown</td>
-                    <td>Triggered when a key is pressed down</td>
+                    <td>keydown</td> <td>Triggered when a key is pressed down</td>
                   </tr>
                   <tr>
-                    <td>keyup</td>
-                    <td>Triggered when a key is released</td>
+                    <td>keyup</td> <td>Triggered when a key is released</td>
                   </tr>
                   <tr>
-                    <td>load</td>
-                    <td>Triggered when the page has finished loading</td>
+                    <td>load</td> <td>Triggered when the page has finished loading</td>
                   </tr>
                 </tbody>
               </table>
@@ -580,8 +513,8 @@ button.addEventListener("click", function() {
               </p>
             </div>
 
-            <div class="lesson">
-            <h3 id="event-object" class="sub-title">Event Object</h3>
+            <div class="lesson" id="event-object">
+            <h3 class="sub-title">Event Object</h3>
             <p>
                 When an event occurs, an event object is created that contains
                 information about the event. This object is automatically passed
@@ -611,23 +544,420 @@ button.addEventListener("click", function(event) {
 
             </div>
 
-            <button class="shareBtn" data-url="#handling-events" aria-level="share this section">↥</button>
+            <button class="shareBtn" data-url="#handling-events" aria-level="share this section">🖇️</button>
       </section>
 
-      <br>
-      <br>
-      <br>
       <span class="line"></span>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
 
-<h3>You caught us 😊! There is no more content here yet. More lessons coming soon...</h3>
-     
+      <!-- Module 4: Working with Canvas -->
+      <section id="working-with-canvas">
+        <h2># Working with Canvas</h2>
+        <p>
+          The HTML5 <code>&lt;canvas&gt;</code> element is a powerful tool for
+          creating graphics and animations in web applications. It provides a
+          drawable area that you can manipulate using JavaScript, making it
+          ideal for game development.
+        </p>
+       
+        <div class="lesson" id="html5-canvas">
+          <h3 class="sub-title">HTML5 Canvas</h3>
+          <p>
+            We have learned all the basics needed , so now we can start having fun and making games! <br><br>
+            In order to make a game, we first need to learn how to draw on the web. <br> To draw shapes and animation for our game, we'll use the <code>&lt;canvas&gt;</code> tag. <br>
+            It became available in HTML5, allowing you .to draw on it using pure javaScript, it acts like a drawing board. <br> <br>
+            Lets start by setting up basic Canvas
+          </p>
+          <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Game&lt;/title&gt;.
+&lt;/head&gt;
+&lt;body&gt;
 
+    &lt;!-- Draw the canvas element with the canvas tag --&gt;
+    &lt;canvas id="canvas" width="600" height="400"&gt your browser does not html5 canvas &lt;/canvas&gt;
+&lt;/body&gt;
+&lt;/html&gt;.
+          </pre>
+          <p>
+            We have set the width and height of the canvas, defining the size of the canvas. <br>
+            <strong>Note:</strong> The text inside the <code>&lt;canvas&gt;</code> tag is displayed only if the browser does not support the canvas element.
+          </p> <br><br>
+          <p>
+            We set a width and height to our canvas, but how will it work on different screen sizes? <br>
+            We can scale our canvas to fit the screen size by adding css. We'll use external css which you can link to your html by adding <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> inside the <code>&lt;head&gt;</code> tag. Just make sure your css file  is in the same folder as your html <br><br>
+            
+           To scale our canvas to fit the screen size, we can use the following css code:
+          </p>
+          <pre>
+#canvas {
+    width: 100%; 
+    border: 1px solid black;
+}
+          </pre>e
+          <p>We should now be able to see our canvas scaled to fit the screen size with a black border around it.</p>
+          <img src="./assets/images/firstCanvasPreview.png" alt="First Canvas Preview" />
+          <p>Congratulations 🎉! You have successfully set up a basic HTML5 canvas for your game development projects.</p> <br><br>
+          <p>
+            But how do we draw on a canvas if it scales based on the screen size which can differ for different users? <br>
+            Drawing on a canvas is done using <strong>coordinates</strong>. <br> <br>
+            The top-left corner of the canvas is the origin point (0, 0). The x-coordinate increases as you move to the right, and the y-coordinate increases as you move down.<br>
+            All the drawing will be done within that coordinate space irrespective of the actual size of the canvas. <br><br>
+          </p>
+          <p class="task"><strong>Task--</strong></p>
+          <ul class="task-ul">
+            <li>Add a canvas to your page with size 600x400</li>
+        <li>Make it scale 100% width using CSS and assign it a black background</li>
+            <li>Round the edges a bit</li>
+          </ul>
+          <p style="text-align: right;">It should be like this:</p>
+          <img class="task-images" src="./assets/images/1stTaskImage.png" alt="task-image">
+        </div>
+
+        <div class="lesson" id="drawing-shapes">
+          <h3 class="sub-title">Drawing Shapes</h3>
+          <p>it's time to do some drawing <br> we'll also be using external js, link it to your html by adding <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></p> <br><br>
+          <p>Next we need to get the canvas reference in js </p>
+          <pre>
+// get the canvas element with the id 'canvas' and save it in the canvas variable name
+const canvas = document.getElementById('canvas')
+          </pre>
+          <p>To access the drawing functions we need to define the <strong>context</strong> of the 2d canvas</p>
+          <pre>
+const context = canvas.getContext('2d')
+          </pre>
+          <p>The canvas <strong>context</strong> is an object with properties and functions that you can use to draw inside the canvas element.</p>
+          <p>To make sure that the canvas is loaded before taking it reference, it is a common practice to use <code>onload</code> event of the window which runs when the window have finished loading</p>
+          <pre>
+window.onload = function() {
+    const canvas = document.getElementById('canvas')
+    const context = canvas.getContext('2d') // a 2d scene to work with
+};
+          </pre> <br><br>
+          <p>Now when we have the context of our canvas, we can start drawing! <br> The first shape we're going to draw is a line. <br> For that we will use the following functions: <code>moveTo()</code>, <code>lineTo()</code> and <code>stroke()</code>.</p>
+          <ul>
+            <li><code>moveTo()</code>: defines the coordinate position of the drawer|cursor (x, y)</li>
+            <li><code>lineTo()</code>: defines the coordinate of the end of our line (x, y)</li>
+            <li><code>stroke()</code>: draws the line ( tells the canvas to render the line )</li>
+          </ul>
+          <p>For example:</p>
+          <pre>
+&lt;!-- HTML --&gt;
+&lt;canvas id='canvas' width='600' height='400'&gt;Your browser does not support html5 canvas&lt;canvas&gt;
+          </pre>
+          <pre>
+// JAVASCRIPT
+window.onload() = function() {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+
+      context.moveTo(50, 100);
+      context.lineTo(400, 200)
+      context.stroke()
+}
+          </pre>
+          <p>this will draw a line from point (50, 100) to point (400, 200)</p>
+          <p class="highlight">Remember the size of our canvas is 600x400. This means that the upper left corner has the coordinates (0, 0), while the lower right corner (600, 400).</p>
+        </div>
+
+        <div class="lesson" id="rectangles-and-circles">
+          <h3 class="sub-title"> Rectangles and Circles</h3>
+          <h4>Rectangles</h4>
+          <p>Drawing a rectangle is done using the <code>rect()</code> function, which has the following syntax <code>context.rect(x, y, width, height)</code>.</p>
+          <p><code>x</code> and <code>y</code> are the starting coordinates, they will represent the upper left corner of the rectangle.<br> Lets draw a rectangle from the point (50, 50) with the size (200, 100)</p>
+          <pre>
+window.onload() = function() {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+
+      context.rect(50, 50, 200, 100)
+      context.stroke()
+}
+          </pre>
+          <p>Similar to drawing a line, we need to call the <code>stroke()</code> function to draw the rectangle.</p> <br>
+
+          <h4>Arc</h4>
+          <p>To draw a circle we first need to <code>arc()</code> function, it has the following syntax: <br> <code>context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterClockwise)</code>.</p> <br>
+          <p><code>centerX</code> and <code>centerY</code> represents the center of the arc. <br> <code>Radius</code> is the size of the arc. <br> <code>startingAngle</code> and <code>endingAngle</code> represents the start and end of the arc in radians. Like when drawing a circle, where you start or stop, canvas always start from the right:</p>
+          <pre>
+        top
+         |
+left ----O---- RIGHT  ← starts here
+         |
+       bottom
+          </pre>
+          <p class="highlight">The last parameter is optional and specifies whether the drawing should be counterClockwise or clockwise. <br> The default value is <strong>false</strong> meaning the drawing is done clockwise</p> <br>
+
+          <h4>Radians</h4>
+          <p>
+            The angles used in <code>arc()</code> are measured in <strong>radians</strong>.
+          </p>
+
+          <p>
+           A radian is a <strong>unit of measurement for angles</strong>, just like degrees.
+           It is based on the geometry of a circle.
+          </p>
+          <p>
+            Instead of dividing a circle into 360 degrees, radians measure angles
+            based on how far around the circle you go.
+          </p>
+          <p><b>Key relationships:</b></p>
+          <ul>
+            <li>180° = π radians</li>
+            <li>360° = 2π radians (a full circle)</li>
+          </ul>
+          <p class="highlight">
+          <strong>PI (π)</strong> is a mathematical constant approximately equal to <strong>3.14159</strong>.
+          <br>
+            Canvas expects angles to be given as numbers measured in radians.
+          </p> <br>
+
+          <h4>Drawing an arc</h4>
+          <p>Lets draw an arc that is centered at the point (150, 150), with radius (60) and starts from angle 0 and spans to angle 180 ( which is eual to PI )</p>
+          <pre>
+window.onload() = function() {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+
+      context.arc(150, 150, 60, 0, Math.PI)
+      context.stroke()
+}
+          </pre>
+          <img src="./assets/images/circlePreview.png" alt="circlePreview image">
+          <p><code>Math.PI</code> is used to access the value of PI constsnt. <br> Noticed that ?, <code>Math.PI</code>(3.14159) is 180⁰ which is half of the circle, <code>Math.PI * 2</code>  will then be ✨.</p> <br>
+
+          <h4>Drawing a Circle</h4>
+          <p>Now that we know how to make an arc, we can make a full circle, Just my multipling the <code>PI</code> by two it is then 360⁰ (a full circle)</p>
+          <pre>
+window.onload() = function() {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+
+      context.arc(150, 300, 60, 0, Math.PI * 2)
+      context.stroke()
+}
+          </pre>
+          <p>We get: <img src="./assets/images/firstCircle.png" alt="firstCircle Preview"></p>
+        </div>
+
+       <div class="lesson" id="applying-style-&-colors">
+          <h3 class="sub-title">Applying Styles & Colors</h3>
+          <p>
+            All the shapes we draw only have a thin black outline. <br> That's the default style of the <code>stroke()</code> function. <br><br>
+            We can set the color and the width of the stroke using the <code>strokeStyle</code> and <code>lineWidth</code> properties. <br> For example:
+          </p>
+          <pre>
+window.onload = function() {
+      const canvas = document.getElementById('canvas')
+      const context = canvas.getContext('2d')
+
+      context.arc(150, 300, 60, 0, Math.PI * 2)
+      context.strokeStyle = 'red' // set the outline color to red
+      context.lineWidth = 2       // make the line 2 px thick
+      context.stroke()
+}
+          </pre>
+          <img src="./assets/images/outlineCircle.png" alt="image">
+          <p>To add a fill color to our shapes, we need to use the <strong><code>fillStyle()</code></strong> function. <br> For example lets paint our circle green</p>
+          <pre>
+window.onload = function() {
+      const canvas = document.getElementById('canvas')
+      const context = canvas.getContext('2d')
+
+      context.arc(150, 300, 60, 0, Math.PI * 2)
+      context.fillStyle = 'green'
+      context.fill()  // show the color
+}
+          </pre>
+          <p>Similar to the the <code>stroke()</code> we need to call the <code>fill()</code> to fill the shape with the specified color.</p>
+          <img src="./assets/images/greenCircle.png" alt="green circle image">
+          <p class="highlight">it is recommended to use the <code>fill()</code> function before the <code>stroke()</code> function in order to remember the stroke correctly.</p>
+          <p>We specified colors using their names, the <code>fillStyle()</code> and <code>strokeStyle</code> functions can also accept color names as <strong>Hex</strong>.</p>
+          <p>
+            A
+            hexadecimal color is specified as <strong>#RRGGBB</strong>, where <strong>RR</strong>(red), <strong>GG</strong>(green) <strong>BB</strong>(blue) are hexadecimal integers between 00 and FF specifing the intencity of the colors. <br>
+            For example <code>#FF0000</code> is displayed as red, because the red component is set to it's highest value (FF) and others are set to 00.
+          </p>
+          <h4>note!: Drawing multiple shapes</h4>
+          <p>In events we need to draw multiple shape, we need to use the <code>beginPath()</code> before each shape. It tells the canvas to stop connecting to old drawings and start a new shape.</p>
+          <p><strong>Think of it like this:</strong> <br> Imagine drawing with a pen on a paper <br> lifting the pen = <code>beginPath()</code> <br> Drawing without lifting = everything connects. <strong>Example:</strong></p>
+          <p>without <code>beginPath()</code>:</p>
+          <pre>
+context.moveTo(50, 50);
+context.lineTo(150, 50);
+context.stroke();
+
+context.arc(200, 50, 30, 0, Math.PI * 2);
+context.stroke();
+          </pre>
+          <p>❌ a random line connects the line and the circle.</p> <br>
+          <p>with <code>beginPath():</code></p>
+          <pre>
+context.beginPath();
+context.moveTo(50, 50);
+context.lineTo(150, 50);
+context.stroke();
+
+context.beginPath();
+context.arc(200, 50, 30, 0, Math.PI * 2);
+context.stroke();
+          </pre>
+          <p>Two clean seperate shapes.</p>
+          <p class="task">Task --</p>
+          <ul class="task-ul">
+            <li>Take the reference of the canvas using javascript</li>
+            <li>make the background dark using css</li>
+            <li>Add x and y variables to define where the circle should be drawn, initialize it to the center-bottom of the canvas (x = 300, y = 350)</li>
+            <li>Draw a red circle with the size 50</li>
+         </ul> <p class="task">Example output:</p>
+         <img src="./assets/images/taskPreview.png" alt="example image">
+       </div>
+
+
+       <div class="lesson" id="drawing-texts">
+         <h3 class="sub-title"> Drawing Texts</h3>
+         <p>Aside from the shapes, you can also draw texts on the canvas. <br> To draw a simple line of text we can use the <code>fillText()</code> function. It has the syntax <code>context.fillText(text, x, y)</code>.</p>
+         <p>the <code>fillText()</code> function takes the text to write as it's first argument then the <code>positionX</code> and <code>positionY</code>.</p>
+         <pre>
+window.onload = function() {
+      const canvas = document.getElementById('canvas')
+      const context = canvas.getContext('2d')
+
+      context.fillText('Welcome To my Gane', 50, 50)
+}
+         </pre>
+         <p>And that's it, simple as that ✨</p>
+       </div>
+
+
+       <!-- adding images -->
+       <div class="lesson" id="adding-images">
+         <h3 class="sub-title">Adding Images</h3>
+         <p>
+           We can also add images to the canvas. <br> For that we first need to create an image object and set it's source url.
+           in our example we will use this image <img src="" alt=""> located in the website, you can download and use on your device.
+         </p>
+         <pre>
+const image = new Image();
+image.src = 'image+link';
+         </pre>
+         <p>The code above creates a variable called <b>image</b>, which is initialized to an image and sets its source to the url.</p> <br>
+         <p>The <code>drawImage()</code> function is used to draw an image on the canvas. <br> it has the syntax <code>context.drawImage(image, x, y, width, height)</code></p>
+         <p>
+           <code>image</code> is the image object, <code>x</code> and <code>y</code> are the starting position on the canvas.
+           while <code>width</code> and <code>height</code> are optional parameters and can be skipped, defaulting to the original image size. <br>
+           If we call the <code>drawImage()</code> function before we created the image object, the image might not be displayed. This happens because the image is not loaded yet.
+         </p>
+         <p>To avoid this problem, it's common to call the <code>drawImage</code> function in the onload event of the image. Basically to draw an image we do:</p>
+         <pre>
+const image = new Image();
+image.src = 'image+link';
+image.onload = function() {
+      context.drawImage(image, x, y, 100, 100)
+}
+         </pre>
+         <p>This will draw the image on the canvas at position (50, 50) with size 100x100</p>
+         <img src="" alt="image Preview">
+         <p>
+           We can draw the image with any size different from it's original size. This might cause the image to be scaled, which can result in fuzzy or blocky artifacts due to the scaling process. <br>
+           The canvas automatically uses <strong>image smoothing algorithm</strong> when scaling image <br>
+           For example let's draw the image in a very large size:
+         </p>
+         <pre>
+
+         </pre>
+         <img src="" alt="image preview">
+       </div>
+
+
+      <!-- Animations -->
+      <div class="lesson" id="animation">
+        <h3 class="sub-title">Animation</h3>
+        <strong>Time to Animate!!</strong>
+        <p>We now know how to add shapes and texts to the canvas but how to move them? </p>
+        <p>
+          Well... the canvas is a drawing board so once we draw something on it, it stays. <br>
+          In order to move an object we need to clear the canvas and redraw the object on it's new location.
+        </p>
+        <p class="highlight">This means that, to create an animation, We need to continously draw on our canvas, updating the position of our objects.</p>
+        <p>To call our drawinging functions periodically, javaScript functions that are used to call a function in every <code>x</code> miliseconds, which are <code>setInterval()</code> and <code>setTimeout()</code>, we will be using <code>setInterval</code>. </p>
+        <p>It has the syntax <code>setInterval(function_to_call, miliseconds)</code>. Using this, we can now update the position of our object while calling a draw function in every <code>x</code> miliseconds.
+           We will be animating a circle. To do that...
+        </p>
+        <p>First, let’s create some variables that will be the position of our object.</p>
+<pre>
+let x = 100;
+let y = 200;
+</pre>
+        <p>Next, we’ll create a <code>draw()</code> function that draws a circle using these values.</p>
+<pre>
+function draw() {
+    context.beginPath();
+    context.arc(x, y, 30, 0, Math.PI * 2);
+    context.fillStyle = 'red';
+    context.fill();
+}
+</pre>
+        <p>Now we create an <strong>update</strong> function. This function will be responsible for:</p>
+
+<ul>
+  <li>clearing the canvas</li>
+  <li>updating the position</li>
+  <li>drawing the object again</li>
+</ul>
+
+<pre>
+function update() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    x += 2;
+    drawCircle();
+}
+</pre>
+
+<p>
+The line <code>x += 2</code> increases the x value on every frame,
+making the circle move to the right.
+</p>
+
+<p>
+Finally, we need to call the update function repeatedly.
+For this we can use <code>setInterval()</code>.
+</p>
+
+<pre>
+setInterval(update, 16);
+</pre>
+
+<p>
+This will run the update function about 60 times per second,
+creating a smooth animation.
+</p>
+
+<p class="highlight">
+If you do not clear the canvas before drawing again,
+the circle will leave a trail behind.
+</p>
+
+<p>
+You should now see a red circle moving across the canvas.
+</p>
+
+<p class="task"><strong>Task --</strong></p>
+<ul class="task-ul">
+  <li>Change the speed of the circle</li>
+  <li>Make the circle move vertically</li>
+  <li>Try reversing the direction</li>
+</ul> 
+      </div>
+
+     </section>
+
+      <span class="line"></span>
+
+  
     </main>
   </body>
-
 </html>
