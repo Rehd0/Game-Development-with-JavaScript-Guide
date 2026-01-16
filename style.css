@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-gutter: unset;
 }
 
 html {
@@ -17,6 +18,16 @@ body {
   line-height: 1.6;
   padding: 5rem;
   align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 2.5rem;
+    font-size: medium;
+  }
+  p {
+    font-size: medium;
+  }
 }
 
 h1,
@@ -50,7 +61,7 @@ header h1 {
 #header-image {
   display: block;
   margin: 50px auto 20px auto;
-  max-width: 300px;
+  max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -86,8 +97,7 @@ nav ul {
   font-size: 12px;
   border-radius: 5px;
   overflow-x: auto;
-  box-shadow:
-    inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15),
     inset -4px -4px 8px rgba(255, 255, 255, 0.7),
     inset -4px 4px 8px rgb(0 0 0 / 0.15);
 }
@@ -97,7 +107,7 @@ nav ul {
   border: 1px solid #333333;
   border-radius: 5px;
   margin: 20px auto;
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15),;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.15);
 }
 .highlight {
   border-left: 2px solid #333333;
@@ -153,13 +163,18 @@ code {
 }
 
 table {
-  min-width: 350px;
+  min-width: 90%;
   border-collapse: separate;
   border-spacing: 0; /* keeps cells tight */
   margin: 20px auto;
   border: 1px solid #333333;
   border-radius: 10px;
   overflow: hidden; /* ensures inner cells don’t spill over */
+}
+@media screen and (max-width: 768px) {
+  table {
+    font-size: small;
+  }
 }
 
 table thead {
@@ -169,7 +184,7 @@ table thead {
 }
 th,
 td {
-  padding: 10px 15px;
+  padding: 10px 10px;
   text-align: left;
 }
 th {
@@ -187,6 +202,10 @@ th {
   border-radius: 50%;
   margin: 10rem auto 0 auto;
   display: block;
+  transition: all 0.5s;
+}
+.shareBtn:hover {
+  transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
@@ -194,4 +213,3 @@ th {
     padding: 10rem;
   }
 }
-

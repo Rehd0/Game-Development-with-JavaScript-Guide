@@ -57,7 +57,7 @@
         <h2>Contents</h2>
         <ol>
           <li>
-            <h2><a href="#getting-started"># Getting Started</a></h2>
+            <h2><a href="#getting-started">Getting Started</a></h2>
             <ul>
               <li><a href="#introduction">Introduction</a></li>
               <li><a href="#requirements">Requirements</a></li>
@@ -66,7 +66,7 @@
           </li>
 
           <li>
-            <h2><a href="#javaScript-Basics"># JavaScript Basics</a></h2>
+            <h2><a href="#javaScript-Basics">JavaScript Basics</a></h2>
             <ul>
               <li>
                 <a href="#variables-and-data-types">Variables and Data Types</a>
@@ -90,7 +90,7 @@
           </li>
 
           <li>
-            <h2><a href="#handling-events"># Handling Events</a></h2>
+            <h2><a href="#handling-events">Handling Events</a></h2>
             <ul>
               <li><a href="#event-listeners">Event Listeners</a></li>
               <li><a href="#common-events">Common Events</a></li>
@@ -99,7 +99,7 @@
           </li>
 
           <li>
-            <h2><a href="#working-with-canvas"># Workig with Canvas</a></h2>
+            <h2><a href="#working-with-canvas">Workig with Canvas</a></h2>
             <ul>
               <li><a href="#html5-canvas">HTML5 Canvas</a></li>
               <li><a href="#drawing-shapes">Drawing Shapes</a></li>
@@ -112,6 +112,24 @@
               <li><a href="#drawing-texts">Drawing Texts</a></li>
               <li><a href="#adding-images">Adding Images</a></li>
               <li><a href="#animation">Animation</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>
+              <a href="#advanced-game-development">Advanced Game Development</a>
+            </h2>
+            <ul>
+              <li><a href="#game-loops">Game Loops</a></li>
+              <li><a href="#frame-rates">Frame Rates</a></li>
+              <li>
+                <a href="#dynamic-frame-rates">Dynamic Frame Rates</a>
+              </li>
+              <li>
+                <a href="#collision-detection">Collision Detection</a>
+              </li>
+              <li><a href="#user-inputs">User input</a></li>
+              <li><a href="#making-a-game">Making a Game</a></li>
             </ul>
           </li>
         </ol>
@@ -1364,8 +1382,6 @@ setInterval(update, 16);
             creating smooth animation.
           </p>
 
-          ---
-
           <h4>Why 60 frames per second?</h4>
 
           <p>
@@ -1382,8 +1398,6 @@ setInterval(update, 16);
             Running animations faster than this does not make them smoother,
             because the screen cannot display more frames than it can refresh.
           </p>
-
-          ---
 
           <h4>Can we use bigger values like 100 or 1000?</h4>
 
@@ -1411,8 +1425,6 @@ setInterval(update, 16);
             does not improve animation quality — it only wastes performance.
           </p>
 
-          ---
-
           <p>
             For this reason, <strong>60 frames per second</strong> is the
             standard for smooth animation. Later, we will replace
@@ -1430,9 +1442,427 @@ setInterval(update, 16);
             <li>Try reversing the direction</li>
           </ul>
         </div>
+
+        <button
+          class="shareBtn"
+          data-url="#getting-started"
+          aria-level="share this section"
+        >
+          🖇️
+        </button>
       </section>
 
       <span class="line"></span>
+
+       <!-- Module 4: Advanced Game Development -->
+      <section id="advanced-game-development">
+        <h2>Advanced Game Development</h2>
+        <p>
+          Now that we have learned the basics of drawing and animating on the
+          canvas, we can dive into more advanced topics in game development.
+        </p>
+
+       <div class="lesson" id="game-loops">
+        <h2 class="sub-title">Game Loops</h2>
+
+        <p>
+          In the previous section, we learned how to animate objects on the
+          canvas by repeatedly clearing and redrawing them.
+          <br /><br />
+          In game development, this continuous process is called a
+          <strong>game loop</strong>.
+        </p>
+
+        <p>
+          A game loop contains the core logic of a game and is responsible for
+          updating everything that happens on the canvas.
+        </p>
+
+        <p>It can handle tasks such as:</p>
+        <ul>
+          <li>Moving objects</li>
+          <li>Creating animations</li>
+          <li>Handling user input</li>
+          <li>Updating game states</li>
+        </ul>
+        <p class="highlight">
+          The game loop needs to run continuously while the game is active.
+        </p>
+
+        <p>
+          In our animation examples, we created a update function and called it
+          repeatedly using <code>setInterval()</code>. This created a simple
+          game loop.
+        </p>
+        <pre>
+setInterval(update, 16);
+        </pre>
+        <p>
+          This means the <code>update()</code> function is called every 16
+          milliseconds, updating the canvas over and over again.
+        </p>
+
+        <p>
+          While <code>setInterval()</code> works, it can cause performance
+          issues, especially on slower devices. <br>
+          If the browser cannot keep up with the redraw timing, the game may
+          stutter or even freeze.
+        </p>
+
+        <p>
+          To solve this problem, JavaScript provides a better solution:
+          <code>window.requestAnimationFrame()</code>. <br>
+          This function tells the browser that we want to perform an animation,
+          and lets the browser decide the best time to redraw the canvas.
+        </p>
+
+        <p class="highlight">
+          Using <code>requestAnimationFrame()</code> prevents browser freezes
+          and automatically adapts to the device’s performance.
+        </p>
+
+        <p>
+          To use it, we simply call <code>requestAnimationFrame()</code> inside
+          our update function and pass the same function as its argument.
+        </p>
+
+        <pre>
+function update() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    // update positions
+    // draw objects
+
+    window.requestAnimationFrame(update);
+}
+        </pre>
+
+        <p>
+          To start the loop, we call the <code>update()</code> function once when
+          the page loads.
+        </p>
+        <pre>
+let x = 100;
+let y = 100;
+
+const canvas = document.getElementById("canvas");
+const context = canvas.getContext("2d");
+
+function drawCircle() {
+    context.beginPath();
+    context.arc(x, y, 30, 0, Math.PI * 2);
+    context.fillStyle = "red";
+    context.fill();
+}
+
+function update() {
+    context.clearRect(0, 0, canvas.width, canvas.height); // clear the canvas
+    x += 1; // update the position
+    drawCircle(); // redraw the object
+    window.requestAnimationFrame(update);
+}
+
+// call the update function onload
+window.onload = function () {
+    update();
+};
+        </pre>
+       </div>
+
+     
+        <div  class="lesson" id="frame-rates">
+        <h2 class="sub-title">Frame Rates</h2>
+
+        <p>Each update of the canvas is called a <strong>frame</strong>.</p>
+        <p>
+          The number of frames drawn every second is called
+          <strong>frames per second (FPS)</strong>.<br>
+          Higher FPS results in smoother animations, while lower FPS makes
+          motion look choppy.
+        </p>
+
+        <p class="highlight">
+          <code>requestAnimationFrame()</code> usually runs at around
+          <strong>60 frames per second</strong>.
+        </p>
+        <p>
+          This number is based on the refresh rate of most displays, which is
+          <strong>60Hz</strong>.
+        </p>
+        <p>
+          Using higher frame rates does not improve smoothness unless the
+          display supports it.
+        </p>
+
+        <h4>Calculating FPS</h4>
+        <p>
+          To calculate the current FPS, we first need to know how much time
+          passes between frames.<br>
+          We can do this using the <code>Date.now()</code> function, which
+          returns the current time in milliseconds.
+        </p>
+        <p>
+          first we decalere a time variable to hold our current time
+          <code>let time = Date.now()</code>
+        </p>
+        <p>Create the showFPS function to show the fps</p>
+        <p>we calculate time passed with current time the window called the <code>update</code> function - time <code>const timePassed = (Date.now() - time) / 1000;</code></p>
+        <p>we round the timePassed <code>const fps = Math.round(1 / timePassed);</code></p>
+        <p>draw the text <code>context.fillStyle = "white";
+        context.font = "10px Arial";
+        context.fillText("FPS: " + fps, 20, canvas.height - 20);</code></p>
+
+        <p>then call it in the update function. <br> <strong>Full Example:</strong></p>
+        <pre>
+let time = Date.now()
+
+function showFPS() {
+    time = Date.now();
+    const timePassed = (Date.now() - time) / 1000;
+
+    const fps = Math.round(1 / timePassed);
+
+    context.fillStyle = "white";
+    context.font = "10px Arial";
+    context.fillText("FPS: " + fps, 20, canvas.height - 20);
+}
+        </pre>
+
+        <p>Dividing by <code>1000</code> converts milliseconds into seconds.<br>
+          Dividing <code>1</code> by the time required to draw one frame gives
+          us the frames per second.
+        </p>
+        <p>call it in the update function</p>
+        <pre>
+function update() {
+    context.clearRect(0, 0, canvas.width, canvas.height);   // clear the canvas
+    x += 1;   // update the position
+    drawCircle();   // redraw the object
+    showFPS();   // show fps
+    window.requestAnimationFrame(update);
+}
+        </pre>
+    
+        <h4>Frame Rates & Time-Based Animation</h4>
+        <p>
+          <code>requestAnimationFrame()</code> does NOT guarantee 60fps. The
+          frame rate depends on the device, screen refresh rate, browser
+          performance, and what else the device is doing.
+        </p>
+
+        <h3>Why Frame Rate Matters</h3>
+
+        <p>
+          Different devices run at different frame rates. Some run at 30fps,
+          others at 60fps, 90fps, or even 120fps.<br>
+          If we move an object by a fixed amount every frame, the animation will
+          look:
+        </p>
+
+        <ul>
+          <li><strong>Faster</strong> on high frame rate devices</li>
+          <li><strong>Slower</strong> on low frame rate devices</li>
+        </ul>
+        <p>That’s a problem. Animations should look the same everywhere.</p>
+
+        <h3>Solution: Movement Relative to Time</h3>
+
+        <p>
+          Instead of moving objects based on frames, we move them based on
+          <strong>time</strong>.
+        </p>
+
+        <p>
+          First, we define a speed value. This speed represents how many pixels
+          the object should move per second.
+        </p>
+
+        <pre>let speed = 100;   // pixels per second</pre>
+
+        <p>
+          Now, instead of adding a fixed number like <code>10</code> every
+          frame, we multiply the speed by the time passed between frames.
+        </p>
+
+        <p><strong>This results in movement relative to time.</strong></p>
+
+        <h3>Canvas Example (Time-Based Movement)</h3>
+
+        <p>
+          This approach increases the rectangle’s position by
+          <strong>speed pixels per second</strong>, regardless of frame rate.
+        </p>
+
+        <p>Try changing the speed value to see how it affects movement.</p>
+
+        <hr />
+
+        <h3>Why This Works</h3>
+
+        <p>
+          If an object moves at <strong>100px per second</strong> and the game
+          runs at <strong>60fps</strong>, then each frame moves the object:
+        </p>
+
+        <pre>100 / 60 = 1.666 pixels per frame</pre>
+
+        <p>
+          If the frame rate changes, the time value changes too, keeping the
+          movement speed consistent.
+        </p>
+
+        <p>
+          ✔ Same speed on all devices ✔ Smooth animation ✔ Professional game
+          behavior
+        </p>
+
+        <hr />
+
+        <h3>Collision Detection</h3>
+
+        <p>
+          Collision detection is the process of checking when two objects
+          <strong>intersect</strong>.
+        </p>
+
+        <p>
+          Example: stopping a rectangle when it hits the right edge of the
+          canvas.
+        </p>
+
+        <pre>
+if (x &gt;= 600) {
+  x = -100;
+}
+       </pre>
+
+        <p>
+          We use <code> -100</code> instead of <code>0</code>
+          because the rectangle itself is 100px wide.
+        </p>
+
+        <hr />
+
+        <h3>Stopping at the Canvas Edge</h3>
+
+        <pre><code>if (x &gt;= 600 - 100) {
+  speed = 0;
+}</code></pre>
+
+        <p>
+          Subtracting the rectangle width ensures it stops exactly when its edge
+          touches the canvas border.
+        </p>
+
+        <hr />
+
+        <h3>Changing Direction on Collision</h3>
+
+        <p>
+          Instead of stopping, we can reverse direction when the rectangle hits
+          the canvas edge.
+        </p>
+
+        <pre><code>let dir = 1;</code></pre>
+
+        <p>
+          <strong>dir = 1</strong> → move right <strong>dir = -1</strong> → move
+          left
+        </p>
+
+        <pre><code>x += dir * (speed * timePassed);</code></pre>
+
+        <p>
+          When direction changes, the rectangle automatically moves the opposite
+          way.
+        </p>
+
+        <hr />
+
+        <h3>Handling Both Canvas Edges</h3>
+
+        <p>We detect collision on both sides using the logical OR operator.</p>
+
+        <pre><code>if (x &lt;= 0 || x &gt;= 600 - 100) {
+  dir *= -1;
+}</code></pre>
+
+        <p>This makes the rectangle bounce between the left and right edges.</p>
+
+        <hr />
+
+        <h3>Adding a Game Loop</h3>
+
+        <p>
+          A real game continuously redraws the screen. This is done using a game
+          loop.
+        </p>
+
+        <pre><code>function draw() {
+  context.clearRect(0, 0, 600, 400);
+
+  context.beginPath();
+  context.arc(x, y, 50, 0, 2 * Math.PI);
+  context.fillStyle = "red";
+  context.fill();
+
+  context.fillStyle = "white";
+  context.fillText("Count: " + count, 20, 30);
+
+  window.requestAnimationFrame(draw);
+}
+
+draw();</code></pre>
+
+        <p>This loop:</p>
+
+        <ul>
+          <li>Clears the canvas</li>
+          <li>Draws objects</li>
+          <li>Requests the next frame</li>
+        </ul>
+
+        <hr />
+
+        <h3>User Input</h3>
+
+        <p>
+          User input allows players to control the game using buttons, keys, or
+          touch.
+        </p>
+
+        <p>Example: controlling a rectangle using buttons.</p>
+
+        <pre><code>&lt;div align="center"&gt;
+  &lt;button id="up"&gt;↑&lt;/button&gt;&lt;br&gt;
+  &lt;button id="left"&gt;←&lt;/button&gt;
+  &lt;button id="down"&gt;↓&lt;/button&gt;
+  &lt;button id="right"&gt;→&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Buttons work well on both desktop and mobile devices.</p>
+
+        <hr />
+
+        <h3>Handling Button Presses</h3>
+
+        <pre><code>let right = document.getElementById('right');
+
+right.onmousedown = function () {
+  dir = 1;
+};
+
+right.onmouseup = function () {
+  dir = 0;
+};</code></pre>
+
+        <p>
+          <code>onmousedown</code> starts movement <code>onmouseup</code> stops
+          movement
+        </p>
+
+        <p>This gives smooth, responsive controls.</p>
+      </section>
     </main>
   </body>
 </html>
